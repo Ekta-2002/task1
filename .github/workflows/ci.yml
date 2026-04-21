@@ -1,0 +1,17 @@
+name: To test the workflow
+
+on:
+  push:
+   branches: dev
+
+jobs:                     # Collection of jobs
+  build:
+    runs-on: ubuntu-latest   # Runner (OS)
+
+    steps:                   # Steps inside job
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run a script
+        run: echo "Hello, GitHub Actions!"
+  
