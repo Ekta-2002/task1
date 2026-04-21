@@ -2,7 +2,7 @@ name: To test the workflow
 
 on:
   push:
-   branches: dev
+   branches: main
 
 jobs:                     # Collection of jobs
   build:
@@ -14,4 +14,11 @@ jobs:                     # Collection of jobs
 
       - name: Run a script
         run: echo "Hello, GitHub Actions!"
+
+      - uses: actions/setup-python@v6 
+        with:
+          python-version: 'pypy3.10'
+      - name: install flask
+        run: |
+          pip3 install flask
   
