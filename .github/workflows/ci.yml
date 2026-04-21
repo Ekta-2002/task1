@@ -21,4 +21,7 @@ jobs:                     # Collection of jobs
       - name: install flask
         run: |
           pip3 install flask
+      - name: execute main python file
+        run: python3 main.py
+          
   
